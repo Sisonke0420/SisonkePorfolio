@@ -1,0 +1,68 @@
+import ArrowIcon from '../ArrowIcon';
+import ProjectCarousel from '../ProjectCarousel';
+import heroProjectImage from '../../assets/Images/764842a6-6633-41d4-8e3a-de603a4c32bf.webp';
+
+function FeaturedWork() {
+  return (
+    <section className="featured-section page-shell">
+      <div className="section-heading">
+        <div>
+          <p className="eyebrow"><span className="eyebrow-line" /> Selected projects</p>
+          <h2>Brand systems and digital stories that move people.</h2>
+        </div>
+        <a className="text-link" href="#work">See all projects <ArrowIcon /></a>
+      </div>
+      <ProjectCarousel />
+    </section>
+  );
+}
+
+function HomePage() {
+  return (
+    <>
+      <section className="hero page-shell">
+        <div className="hero-copy">
+          <p className="eyebrow"><span className="eyebrow-line" /> Design studio · digital craft</p>
+          <h1>
+            Premium ideas for<br />
+            brands that want to <span className="accent-word">feel unforgettable</span><span className="accent-period">.</span>
+          </h1>
+          <p className="hero-description">
+            I’m Sisonke, a multidisciplinary designer and developer building elevated brands,
+            sharper narratives, and polished digital experiences for ambitious businesses.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-dark" href="#work">
+              Explore my work <ArrowIcon />
+            </a>
+            <a className="text-link" href="#about">A little about me</a>
+          </div>
+          <div className="hero-note">
+            <span className="note-spark">✳</span>
+            <span>Based in Johannesburg<br />Working worldwide</span>
+          </div>
+        </div>
+        <div className="hero-visual">
+          <img className="hero-portrait-image" src={heroProjectImage} alt="Orange and cream poster with the headline “Want to practice graphic design?”" />
+          <span className="hero-portrait-caption">
+            <span className="availability-dot" />
+            Brand design · Visual systems
+          </span>
+        </div>
+        <div className="hero-index"><span>01</span><span className="index-rule" /><span>04</span></div>
+      </section>
+
+      <section className="intro-strip">
+        <div className="page-shell intro-inner">
+          <p>Strategy first. <em>Design that earns attention.</em></p>
+          <a href="#about" className="round-link" aria-label="Learn about Sisonke Miya">
+            <ArrowIcon diagonal />
+          </a>
+        </div>
+      </section>
+      <FeaturedWork />
+    </>
+  );
+}
+
+export default HomePage;
